@@ -1,9 +1,9 @@
-.SimpleCounter{
+.Counter{
     text-align: center;
     background: black;
 }
 
-.SimpleCounter div{
+.Counter div{
     display:inline-block;
     font-size: 60px;
     line-height: 60px;

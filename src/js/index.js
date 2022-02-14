@@ -1,12 +1,14 @@
 //import react into the bundle
 import React from "react";
 import ReactDOM from "react-dom";
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 
 // include your styles into the webpack bundle
 import "../styles/index.css";
 import "bootstrap";
-// import "@fortawesome/fontawesome-free/css/all.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+//import your own components
 
 function SimpleCounter(props) {
 	return (
@@ -15,34 +17,34 @@ function SimpleCounter(props) {
 				<i className="far fa-clock"></i>
 			</div>
 			<div className="four">{props.digitFour % 10}</div>
-			<div className="tree">{props.digitThree % 10}</div>
-			<div className="Two">{props.digitTwo % 10}</div>
-			<div className="One">{props.digitOne % 10}</div>
+			<div className="three">{props.digitThree % 10}</div>
+			<div className="two">{props.digitTwo % 10}</div>
+			<div className="one">{props.digitOne % 10}</div>
 		</div>
 	);
 }
-SimpleCounter.prototype = {
-	digitFour: propTypes.number,
-	digitThree: propTypes.number,
-	digitTwo: propTypes.number,
-	digitOne: propTypes.number,
+SimpleCounter.protoTypes = {
+	digitFour: PropTypes.number,
+	digitThree: PropTypes.number,
+	digitTwo: PropTypes.number,
+	digitOne: PropTypes.number,
 };
 
-let Counter = 0;
+let counter = 0;
 setInterval(function () {
-	const Four = Math.floor(Counter / 1000);
-	const Three = Math.floor(Counter / 100);
-	const Two = Math.floor(Counter / 10);
-	const One = Math.floor(Counter / 1);
-	console.log(Four, Three, Two, One);
-
-	Counter++;
+	let four = Math.floor(counter / 1000);
+	let three = Math.floor(counter / 100);
+	let two = Math.floor(counter / 10);
+	let one = Math.floor(counter / 1);
+	console.log(four, three, two, one);
+	//render your react application
+	counter++;
 	ReactDOM.render(
 		<SimpleCounter
-			digitOne={One}
-			digitOne={Two}
-			digitOne={Three}
-			digitOne={Four}
+			digitOne={one}
+			digitTwo={two}
+			digitThree={three}
+			digitFour={four}
 		/>,
 		document.querySelector("#app")
 	);
