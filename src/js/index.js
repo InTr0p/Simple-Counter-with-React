@@ -21,5 +21,16 @@ function SimpleCounter(props) {
 	);
 }
 
-//render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+let Counter = 0;
+setInterval(function(){
+    const four = math.floor(Counter/10000);
+    const three = math.floor(Counter/1000);
+    const two = math.floor(Counter/100);
+    const one = math.floor(Counter/10);
+    console.log(four, three, two, one)
+},1000);
+
+    
+    //render your react application
+    ReactDOM.render(<SimpleCounter digitone={Counter.indexof()} />, document.querySelector("#app")
+    );
