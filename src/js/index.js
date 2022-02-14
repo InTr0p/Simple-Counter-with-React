@@ -5,8 +5,16 @@ import ReactDOM from "react-dom";
 // include your styles into the webpack bundle
 import "../styles/index.css";
 
-//import your own components
-import Home from "./component/home.jsx";
+function SimpleCounter (props){
+    return <div className="Counter">
+        <div className="calendar"></div>
+        <div className="one"></div>
+        <div className="two"></div>
+        <div className="tree"></div>
+        <div className="four"></div>
+    </div>
+}
+
 
 //render your react application
 ReactDOM.render(<Home />, document.querySelector("#app"));
