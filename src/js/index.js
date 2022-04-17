@@ -2,11 +2,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
-
 // include your styles into the webpack bundle
 import "../styles/index.css";
 import "bootstrap";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 
 //import your own components
 
@@ -14,7 +12,7 @@ function SimpleCounter(props) {
 	return (
 		<div className="Counter">
 			<div className="calendar">
-				<i className="far fa-clock"></i>
+				<i className="far fa-clock" />
 			</div>
 			<div className="four">{props.digitFour % 10}</div>
 			<div className="three">{props.digitThree % 10}</div>
